@@ -1,0 +1,12 @@
+cmake_minimum_required(VERSION 3.12)
+project(AMGCLExample)
+
+set(CMAKE_CXX_STANDARD 11)
+
+# 指定AMGCL的路径（根据你的安装位置进行修改）
+set(AMGCL_DIR /path/to/amgcl)
+
+find_package(AMGCL REQUIRED)
+
+add_executable(AMGCLExample main.cpp)
+target_link_libraries(AMGCLExample AMGCL::amgcl)
